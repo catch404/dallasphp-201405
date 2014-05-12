@@ -7,7 +7,9 @@ require(sprintf(
 
 var_dump(Cache::Create());
 
-Cache::Set('test','test string');
+$obj = (object)['Hello'=>'World'];
+
+Cache::Set('test',$obj);
 var_dump(Cache::Get('test'));
 
 Cache::Drop('test');
